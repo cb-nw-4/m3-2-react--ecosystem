@@ -8,8 +8,8 @@ const Header=()=>{
         <Bar>
             <Paragraph>Fruit Emporium</Paragraph>
             <Nav>
-                <Link to='/'>Home</Link>
-                <Link to='/about'>About</Link>
+                <StyledLink to='/'>Home</StyledLink>
+                <StyledLink to='/about'>About</StyledLink>
             </Nav>
         </Bar>
     );
@@ -33,6 +33,14 @@ const Nav=styled.div`
     padding-top:30px;
     justify-content:space-between;
     width:15%;
+`;
+
+const StyledLink = styled(Link)`
+    color:blueviolet;
+    text-decoration: none;
+    &:hover, &:active{
+        color:tomato;
+    } 
 `;
 
 export default Header;

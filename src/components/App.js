@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import {
   BrowserRouter as Router,
@@ -11,19 +10,19 @@ import {
 import Header from './Header.js';
 import Home from './Home.js';
 import About from './About.js';
-import ListingGrid from './ListingGrid.js'
+import GlobalStyles from './GlobalStyles.js'
 
 const App = (props) => {
   return (
     <>
       <Router>
+        <GlobalStyles/ >
         <Header />
-          <Switch>
-            <Route exact path="/"><Home /></Route>
-            <Route path="/about"><About /></Route>
-            <Route path="/items/:itemId"></Route>
-          </Switch>
-      
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route path="/about"><About /></Route>
+          <Route path="/items/:itemId"></Route>
+        </Switch>
       </Router>
     </>
   )

@@ -5,12 +5,13 @@ import styled from 'styled-components';
 
 
 const ListingGrid = ({ itemList }) => {
-    console.log(itemList);
+    //console.log(itemList);
     return (
         <Container>
             {itemList.map((element)=>{
+                console.log(element);
                 return(
-                    <Box>
+                    <Box key={element.id}>
                         <Image src={element.imageSrc}/>
                         <h2>{element.name}</h2>
                         <h3>{element.latinName}</h3>
@@ -33,7 +34,8 @@ const Container=styled.div`
     text-align:center;
     grid-row-gap:30px;
     grid-column-gap:10px;
-    margin-left: 10%;
+    justify-items: center;
+    padding:30px;
 `;
 
 const Box=styled.div`
