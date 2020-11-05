@@ -4,6 +4,10 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
+import About from './About';
+
+import Homepage from './Home';
+
 // import { render } from 'react-dom';
 
 
@@ -39,7 +43,7 @@ const NavItems = styled.h4`
     /* margin-left: 70%; */
 `
 
-const About = styled(NavItems)`
+const AboutLink = styled(NavItems)`
     margin: 0px 20px;
     position: relative;
 
@@ -58,9 +62,9 @@ const Header = (props) => {
                         <Link to="/">Home</Link>
                     </NavItems>
                 
-                    <About>
+                    <AboutLink>
                         <Link to="/about">About</Link>
-                    </About>
+                    </AboutLink>
                 </NavItemsContainer>
 
             </Wrapper>
