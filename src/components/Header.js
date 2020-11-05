@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0;
 `;
 
 const StyledLink = styled(Link)`

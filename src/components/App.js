@@ -1,7 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './Header';
 import { createGlobalStyle } from 'styled-components';
+import Header from './Header';
+import About from './About';
+import Home from './Home';
+import styled from 'styled-components';
+
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,20 +13,31 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    margin: 0px;
+    margin: 0px 30px;
   }
 `;
 
+const Wrapper = styled.div` 
+  max-width: 900px;
+  margin: auto;
+`;
 
 const App = (props) => {
   return (
   <Router>
      <GlobalStyle />
+    < Wrapper>
      <Header/>
     <Switch>
-      <Route path="/">Homepage</Route>
-      <Route path="/about">About</Route>
+      <Route path="/about">
+        <About/>
+      </Route>
+      <Route path="/">
+        <Home items={props.items}/>
+      </Route>
+      
     </Switch>
+    </Wrapper>
   </Router>);
 };
 
