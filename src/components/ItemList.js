@@ -20,29 +20,29 @@ const FruitDiv = styled.div`
   width: 300px;
   padding: 10px;
   text-align: center;
-  border: 2px solid lightgray;
+  border: 2px solid gray;
   border-radius: 10px;
-  margin-bottom: 30px; 
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 30px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 `;
- 
+
 const FruitLink = styled(Link)`
-text-decoration:none;
-`
-const FruitName = styled.h2`
-  color: black; 
-  text-decoration:underline;
+  text-decoration: none;
 `;
-const FruitImage = styled.img`  
-z-index:2;
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
-margin-top:-30px;
+const FruitName = styled.h2`
+  color: black;
+  text-decoration: underline;
+`;
+const FruitImage = styled.img`
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-top: -30px;
   width: 200px;
   border-radius: 20px;
 `;
 const FruitLatinName = styled.h4`
-  color: lightslategrey; 
-  font-style:oblique;
+  color: lightslategrey;
+  font-style: oblique;
   text-decoration: none;
 `;
 
