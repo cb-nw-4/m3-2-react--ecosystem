@@ -11,17 +11,18 @@ import Header from './Header.js';
 import Home from './Home.js';
 import About from './About.js';
 import GlobalStyles from './GlobalStyles.js'
+import ItemDetails from './ItemDetails.js'
 
 const App = (props) => {
   return (
     <>
       <Router>
-        <GlobalStyles/ >
+        <GlobalStyles />
         <Header />
         <Switch>
           <Route exact path="/"><Home /></Route>
           <Route path="/about"><About /></Route>
-          <Route path="/items/:itemId"></Route>
+          <Route path="/items/:itemId"><ItemDetails /></Route>
         </Switch>
       </Router>
     </>

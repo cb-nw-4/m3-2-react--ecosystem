@@ -9,13 +9,17 @@ const ListingGrid = ({ itemList }) => {
     return (
         <Container>
             {itemList.map((element)=>{
-                console.log(element);
+                //console.log(element);
                 return(
-                    <Box key={element.id}>
-                        <Image src={element.imageSrc}/>
-                        <h2>{element.name}</h2>
-                        <h3>{element.latinName}</h3>
-                    </Box>
+                    <>
+                        <Link to={`/items/${element.id}`}>
+                            <Box key={element.id}>
+                                <Image src={element.imageSrc}/>
+                                <h2>{element.name}</h2>
+                                <h3>{element.latinName}</h3>
+                            </Box>
+                        </Link>
+                    </>
                 );
             })}
         </Container>
@@ -35,7 +39,7 @@ const Container=styled.div`
     grid-row-gap:30px;
     grid-column-gap:10px;
     justify-items: center;
-    padding:30px;
+    padding:4% 18% 4% 18%;
 `;
 
 const Box=styled.div`
