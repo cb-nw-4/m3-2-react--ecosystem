@@ -5,18 +5,20 @@ import Header from './Header.js';
 import Home from './Home.js';
 import About from './About.js';
 
-const App = (props) => {
+const App = ({items, sellers}) => {
   return (
     <Router>
       <Header />
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home items={items}/>
         </Route>
         <Route path='/about'>
           <About />
         </Route>
-        {/* <Route path='/items/:itemId'>Items</Route> */}
+        {/* <Route path='/items/:itemId'>
+          <ItemDetails />
+        </Route> */}
       </Switch>
     </Router>
   );

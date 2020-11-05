@@ -1,13 +1,16 @@
 import React from 'react';
+import ListingGrid from './ListingGrid.js';
 
-const Home = (props) => {
+const Home = ({items}) => {
     return (
+        <>
         <p>
             Fruit emporium sells the finest fruits from this world and beyond.
 
             Browse items:
-            <ListingGrid />
         </p>
+        <ListingGrid itemList={Object.values(items)}/>
+        </>
     );
 }
 

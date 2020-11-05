@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as LinkBase } from 'react-router-dom';
 
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     border: 1px solid red;
+    width: 100vw;
 
     & div {
         display: flex;
@@ -14,10 +15,12 @@ const Nav = styled.nav`
         font-size: 2.5em;
         font-weight: bold;
     }
-    & p{
-        font-size: 1.2em;
-        margin: 0 1vw;
-    }
+`;
+
+const Link = styled(LinkBase)`
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 2vw;
 `;
 
 const Header = (props) => {
@@ -25,8 +28,8 @@ const Header = (props) => {
         <Nav>
             <icon>Fruit Emporium</icon>
             <div>
-                <p><Link to='/'>Home</Link></p>
-                <p><Link to='/about'>About</Link></p>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
             </div>
         </Nav>
     );
