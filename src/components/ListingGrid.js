@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Grid = styled.section`
+  position: relative;
+  top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;
@@ -40,15 +43,15 @@ const LatinName = styled.div`
   font-size: 0.8rem;
   font-style: italic;
   font-weight: bold;
-  color: gray;
+  color: #b2b2b2;
 `;
 
 const ListingGrid = (props) => {
   return <Grid>
     {props.itemList.map(item => {
       return (
-        <Cell>
-          <div><Img src={item.imageSrc} /></div>
+        <Cell key={Date.now() * Math.round(Math.random() * 1000000 + 1)}> {/* just use UUID next time */}
+          <div><Link to={`/items/${item.id}`}><Img src={item.imageSrc} /></Link></div>
           <Name><h2>{item.name}</h2></Name>
           <LatinName>{item.latinName}</LatinName>
         </Cell>);
