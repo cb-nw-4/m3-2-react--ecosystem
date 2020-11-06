@@ -1,14 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <Wrapper>
       <h1>Fruit Emporium</h1>
       <Menu>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/about">About</StyledLink>
+        <StyledLink
+          exact to="/"
+          activeStyle={{
+            textDecoration: "underline",
+            color: "#cc43a1",
+          }}
+        >
+          Home
+        </StyledLink>
+        <StyledLink
+          to="/about"
+          activeStyle={{
+            textDecoration: "underline",
+            color: "#cc43a1",
+          }}
+        >
+          About
+        </StyledLink>
       </Menu>
     </Wrapper>
   );
@@ -26,7 +42,7 @@ const Menu = styled.div`
   width: 400px;
   height: 20px;
 `;
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   color: #4350e0;
   font-weight: bold;
   text-decoration: none;
