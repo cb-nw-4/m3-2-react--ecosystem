@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-
 const Grid = styled.div`
     display: grid;
     align-items: center;
-    grid-template-columns: 270px 270px 270px;
+    grid-template-columns: 300px 300px 300px;
     grid-template-rows: auto auto;
-    grid-column-gap: 35px;
-    grid-row-gap: 35px;
+    grid-column-gap: 46px;
+    grid-row-gap: 46px;
     justify-items: stretch;
 `;
 const Item = styled.div`
@@ -23,17 +22,17 @@ const Item = styled.div`
 `;
 
 const StyledImg = styled.img`
-    width: 160px;
-    height: 160px;
-    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    border-radius: 16px;
     position: absolute;
     top: -16px;
 `;
 
 const Name = styled.p`
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin:160px 0 20px;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin:175px 0 20px;
 `;
 
 const LatinName = styled.p`
@@ -42,23 +41,26 @@ const LatinName = styled.p`
     margin-bottom: 40px;
     text-align: center;
     font-style: italic;
-    color: grey;
-    font-weight: 500;
+    color: #A0A0A0;
+    font-size: 1.25rem;
+    font-weight: 600;
+`;
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: black;
 `;
 
 
-
 const ListingGrid = ({ itemList }) => {
-    let keyValue = 0;
     return (
         <Grid>
         {
             itemList.map((item)=>{
-                keyValue++;
                 return (
-                    <Item key = {keyValue}>
+                    <Item id = {item.id}>
                         <StyledImg src={item.imageSrc}/>
-                        <Name>{item.name}</Name>
+                        <Name><StyledLink to={`/items/${item.id}`}>{item.name}</StyledLink></Name>
                         <LatinName>{item.latinName}</LatinName>
                     </Item>
                     );
