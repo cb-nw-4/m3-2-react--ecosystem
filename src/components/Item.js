@@ -38,11 +38,11 @@ const StyledLink = styled(Link)`
 const Item = ({name, latinName, imageSrc, id})=>{
   return(       
       < StyledLink to={`/items/${id}`} >
-      <FruitContainer>
+        <FruitContainer>
           <FruitImage src={imageSrc} alt={name} />
           <FruitName>{name}</FruitName>
           <p><i>{latinName}</i></p>
-      </FruitContainer>
+        </FruitContainer>
       </ StyledLink>
   );
 };
