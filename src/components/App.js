@@ -24,7 +24,7 @@ const App = (props) => {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/items/:itemId">
+      <Route path="/items/:itemId" component={ItemDetails}>
         <ItemDetails />
       </Route>
       <Route path="/">

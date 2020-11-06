@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 
 import { items } from '../data';
 
+import ItemDetails from './ItemDetails';
+
 const FruitContainer = styled.div` 
     display: inline-block;
 `
@@ -48,13 +50,12 @@ const ListingGrid = ({ itemList }) => {
                 return (
                     <FruitContainer>
                         <FruitItem>
-                        <Link to="/items/${item.id}"><FruitImage src={item.imageSrc} /></Link>
+                        <Link to={`/items/${item.id}`}><FruitImage src={item.imageSrc} /></Link>
                             <FruitName>{item.name}</FruitName>
                             <LatinName>{item.latinName}</LatinName>
                         </FruitItem>
                     </FruitContainer>
                 )
-
             })}
         </div>
     );
