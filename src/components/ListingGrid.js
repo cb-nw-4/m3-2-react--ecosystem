@@ -10,8 +10,8 @@ const Grid = styled.div`
     grid-template-rows: auto auto;
     grid-column-gap: 46px;
     grid-row-gap: 46px;
-    justify-items: stretch;
     margin-bottom:80px;
+    justify-content:center;
 `;
 const Item = styled.div`
     box-shadow: 0px 3px 20px #e0e0eb;

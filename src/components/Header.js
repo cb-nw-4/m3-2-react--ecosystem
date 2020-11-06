@@ -17,9 +17,9 @@ const StyledLink = styled(NavLink)`
     text-decoration: none;
 
     &.selected{
-        color: #d332db;
+        color: #FF0073;
         text-decoration-line: underline;
-        text-decoration-color: #d332db;
+        text-decoration-color: #FF0073;
     }
 
     &:not(.selected){
