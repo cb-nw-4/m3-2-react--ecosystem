@@ -26,21 +26,20 @@ const Wrapper = styled.div`
 const App = (props) => {
   return (
   <Router>
-     <GlobalStyle />
+    <GlobalStyle />
     < Wrapper>
-     <Header/>
-    <Switch>    
-      <Route path="/items/:itemId">
-        <ItemDetails/>
-      </Route>
-      <Route path="/about">
-        <About/>
-      </Route>
-      <Route path="/">
-        <Home items={props.items}/>
-      </Route>
-      
-    </Switch>
+      <Header/>
+      <Switch>    
+        <Route path="/items/:itemId">
+          <ItemDetails/>
+        </Route>
+        <Route path="/about">
+          <About/>
+        </Route>
+        <Route path="/">
+          <Home items={props.items}/>
+        </Route>      
+      </Switch>
     </Wrapper>
   </Router>);
 };

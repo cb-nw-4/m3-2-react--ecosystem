@@ -29,7 +29,6 @@ padding-bottom: 15px;
 margin-bottom: 0px;
 `;
 
-
 const StyledLink = styled(Link)`
   text-decoration: none;  
   color: inherit;
