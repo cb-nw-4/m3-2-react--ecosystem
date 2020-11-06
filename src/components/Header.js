@@ -17,7 +17,8 @@ const StyledLink = styled(NavLink)`
   font-weight: bold;
 
   &.active {
-      border-bottom: 4px solid blueViolet;
+      border-bottom: 4px solid fuchsia;
+      color: fuchsia;
   }
 `;
 
