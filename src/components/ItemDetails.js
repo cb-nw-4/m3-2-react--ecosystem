@@ -16,15 +16,23 @@ export const ItemDetails = () => {
         <p>{item.description}</p>
         <p>Product of {item.countryOfOrigin}</p>
         {item.quantity > 0 ? <button>${item.price} - Buy now</button> : <p>Out of stock </p>}
-        <div>
+        <SellerContainer>
           <img src={sellers[item.sellerId].avatarSrc}></img>
           <p>Sold by: {sellers[item.sellerId].storeName}</p>
-        </div>
+        </SellerContainer>
       </FruitDescriptionContainer>
     </FruitContainer>
   );
 };
 
+const SellerContainer = styled.div`
+  display: flex;
+  margin-top: 1rem;
+
+  img {
+    margin-right: 1rem;
+  }
+`;
 
 
 const FruitContainer = styled.div`

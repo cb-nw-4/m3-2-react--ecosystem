@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Header = () => {
@@ -8,10 +8,10 @@ export const Header = () => {
       <Logo>Fruit Emporium</Logo>
       <LinkContainer>
         <Links>
-          <StyledLink to="/">Home</StyledLink>
+          <StyledLink exact to="/" activeClassName='selected'>Home</StyledLink>
         </Links>
         <Links>
-          <StyledLink to="/about">About</StyledLink>
+          <StyledLink to="/about" activeClassName='selected'>About</StyledLink>
         </Links>
       </LinkContainer>
     </Nav>
@@ -40,11 +40,16 @@ const Logo = styled.h2`
   font-size: 2rem;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   text-decoration: none;
 
   &:hover {
     color: red;
+    border-bottom: 2px solid red;
+  }
+
+  &.selected {
+    color: red; 
     border-bottom: 2px solid red;
   }
 `;
