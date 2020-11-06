@@ -39,7 +39,6 @@ const Container=styled.div`
     grid-row-gap:30px;
     grid-column-gap:30px;
     justify-items: center;
-
 `;
 
 const Box=styled.div`
@@ -53,6 +52,9 @@ const Box=styled.div`
 const StyledLink=styled(Link)`
     text-decoration:none;
     color:black;
+    &:hover{
+        transform:scale(1.05);
+    }
 `;
 
 const Name= styled.h3`
