@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AboutStyle = styled.div`
-    font-weight: bold;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-size: 1.25rem;
 `;
 
 const MegaBold = styled.b`

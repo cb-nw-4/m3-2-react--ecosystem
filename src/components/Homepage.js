@@ -4,11 +4,16 @@ import ListingGrid from './ListingGrid.js'
 import data, { items } from '../data.js'
 
 const Intro = styled.p`
-   font-weight: 700;
+   font-size: 1.25rem;
+   font-weight: 600;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
 `;
 
 const Browse = styled.p`
-   font-weight: 900;
+   font-size: 1.25rem;
+   font-weight: 800;
+   margin-bottom: 80px;
 `;
 
 const Homepage = () => {

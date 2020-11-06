@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Logo = styled.p`
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 800;
     display: inline;
     margin:0;
     padding-top: 20px;
@@ -12,7 +12,7 @@ const Logo = styled.p`
 
 const StyledLink = styled(Link)`
     padding: 0px 10px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
 `;
