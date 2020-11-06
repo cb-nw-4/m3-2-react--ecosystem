@@ -6,6 +6,9 @@ import About from './About';
 
 import Homepage from './Home';
 
+import ItemDetails from './ItemDetails';
+
+
 import { 
   BrowserRouter,
   Switch, 
@@ -20,12 +23,12 @@ const App = (props) => {
     <Switch>
       <Route path="/about">
         <About />
-        {/* <h4>About</h4> */}
       </Route>
-      <Route path="/items/:itemId">An item</Route>
+      <Route path="/items/:itemId">
+        <ItemDetails />
+      </Route>
       <Route path="/">
         <Homepage />
-        {/* <h4>Home</h4> */}
       </Route>
     </Switch>
   </BrowserRouter>
