@@ -7,6 +7,8 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import styled from 'styled-components';
+
 import Header from './Header.js';
 import Home from './Home.js';
 import About from './About.js';
@@ -15,7 +17,7 @@ import ItemDetails from './ItemDetails.js'
 
 const App = (props) => {
   return (
-    <>
+    <Section>
       <Router>
         <GlobalStyles />
         <Header />
@@ -25,9 +27,14 @@ const App = (props) => {
           <Route path="/items/:itemId"><ItemDetails /></Route>
         </Switch>
       </Router>
-    </>
+    </Section>
   )
   
 };
+
+const Section=styled.section`
+  margin-left:13%;
+  margin-right:13%;
+`;
 
 export default App;

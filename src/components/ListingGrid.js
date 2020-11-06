@@ -12,13 +12,14 @@ const ListingGrid = ({ itemList }) => {
                 //console.log(element);
                 return(
                     <>
-                        <Link to={`/items/${element.id}`}>
+                        <StyledLink to={`/items/${element.id}`}>
                             <Box key={element.id}>
                                 <Image src={element.imageSrc}/>
-                                <h2>{element.name}</h2>
-                                <h3>{element.latinName}</h3>
+                                <Name>{element.name}</Name>
+                                <Horizontal />
+                                <Latin>{element.latinName}</Latin>
                             </Box>
-                        </Link>
+                        </StyledLink>
                     </>
                 );
             })}
@@ -29,7 +30,6 @@ const ListingGrid = ({ itemList }) => {
 const Image=styled.img`
     height:100px;
     width:100px;
-    border-radius:10px;
 `;
 
 const Container=styled.div`
@@ -37,17 +37,36 @@ const Container=styled.div`
     grid-template-columns: repeat(3, 1fr);
     text-align:center;
     grid-row-gap:30px;
-    grid-column-gap:10px;
+    grid-column-gap:30px;
     justify-items: center;
-    padding:4% 18% 4% 18%;
+
 `;
 
 const Box=styled.div`
     padding:20px;
     box-shadow: 0px 0px 17px -2px #808080;
     border-radius:10px;
-    height:200px;
-    width:200px;
+    height:220px;
+    width:150px;
+`;
+
+const StyledLink=styled(Link)`
+    text-decoration:none;
+    color:black;
+`;
+
+const Name= styled.h3`
+    font-weight:600;
+`;
+
+const Latin=styled.p`
+    font-size:13px;
+    color:gray;
+    font-style:italic;
+`;
+const Horizontal=styled.hr`
+    margin:0 65px 0 65px;
+    color:gray;
 `;
 
 export default ListingGrid;

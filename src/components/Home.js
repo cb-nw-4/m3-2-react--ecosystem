@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import { items } from '../data.js'
 import ListingGrid from './ListingGrid.js'
@@ -8,15 +6,23 @@ import ListingGrid from './ListingGrid.js'
 const Home=()=>{
     return(
         <div>
-            <p>Fruit emporium sells the finest fruits from this world and beyond.
+            <Paragraph>Fruit emporium sells the finest fruits from this world and beyond.
                 <br/>
-            Browse items:
-            </p>
+            <p><strong>Browse items:</strong></p>
+            </Paragraph>
         
             <ListingGrid itemList={Object.values(items)}/>
         </div>
     );
     
 }
+
+const Paragraph=styled.p`
+    padding:10px 0px 0px 0px;
+    &>p{
+        margin-top:20px;
+    }
+    font-size: 18px;
+`;
 
 export default Home;
