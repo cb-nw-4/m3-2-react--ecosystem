@@ -7,7 +7,7 @@ const BoldStyle = styled.b`
   font-weight: bold;
 `;
 
-const Home = (props) => {
+const Home = () => {
   return (
     <>
       <p>

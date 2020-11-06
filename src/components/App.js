@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const App = (props) => {
+const App = () => {
   return (
     <Router>
       <GlobalStyle />
