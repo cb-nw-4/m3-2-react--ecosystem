@@ -5,7 +5,6 @@ import { Link as LinkBase } from 'react-router-dom';
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
     width: 100vw;
 
     & div {

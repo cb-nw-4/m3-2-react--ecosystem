@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const Ul = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    border: red solid 1px;
 
     & li {
         margin: 2vh 8vw;
@@ -50,6 +50,7 @@ const ListingGrid = ({ itemList }) => {
                         <img src={item.imageSrc}></img>
                         <h1>{item.name}</h1>
                         <h2>{item.latinName}</h2>
+                        <Link to={`/items/${item.id}`}>Item Details</Link>
                     </li>
                     );
             })}

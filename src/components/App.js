@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header.js';
 import Home from './Home.js';
 import About from './About.js';
+import ItemDetails from './ItemDetails.js';
 
 const App = ({items, sellers}) => {
   return (
@@ -16,9 +17,9 @@ const App = ({items, sellers}) => {
         <Route path='/about'>
           <About />
         </Route>
-        {/* <Route path='/items/:itemId'>
+        <Route path='/items/:itemId'>
           <ItemDetails />
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
   );
