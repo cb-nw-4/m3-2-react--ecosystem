@@ -7,6 +7,7 @@ const Logo = styled.p`
     font-weight: 900;
     display: inline;
     margin:0;
+    padding-top: 20px;
 `;
 
 const StyledLink = styled(Link)`
@@ -21,8 +22,6 @@ const HeaderStyle = styled.nav`
     align-items:flex-end;
     justify-content: space-between;
     padding: 20px 0;
-    font-family: 'Raleway';
-    margin: 0 70px;
     `;
 
 const Header = (props) => {
