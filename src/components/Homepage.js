@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ListingGrid from './ListingGrid.js'
-import data, { items } from '../data.js'
+import { items } from '../data.js'
 
 const Intro = styled.p`
    font-size: 1.5rem;

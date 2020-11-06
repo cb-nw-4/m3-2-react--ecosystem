@@ -11,6 +11,7 @@ const Grid = styled.div`
     grid-column-gap: 46px;
     grid-row-gap: 46px;
     justify-items: stretch;
+    margin-bottom:80px;
 `;
 const Item = styled.div`
     box-shadow: 0px 3px 20px #e0e0eb;
@@ -58,7 +59,7 @@ const ListingGrid = ({ itemList }) => {
         {
             itemList.map((item)=>{
                 return (
-                    <Item id = {item.id}>
+                    <Item key = {item.id}>
                         <StyledImg src={item.imageSrc}/>
                         <Name><StyledLink to={`/items/${item.id}`}>{item.name}</StyledLink></Name>
                         <LatinName>{item.latinName}</LatinName>

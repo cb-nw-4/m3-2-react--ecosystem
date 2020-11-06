@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useParams } from "react-router-dom";
-import data, { items, sellers } from '../data.js'
+import { items, sellers } from '../data.js'
 
 const ItemCard = styled.div`
     margin-top:0;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Logo = styled.p`
@@ -10,11 +10,23 @@ const Logo = styled.p`
     padding-top: 20px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
     padding: 0px 20px;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
+
+    &.selected{
+        color: #d332db;
+        text-decoration-line: underline;
+        text-decoration-color: #d332db;
+    }
+
+    &:not(.selected){
+        color:#4700E0;
+    }
+
+
 `;
 
 const HeaderStyle = styled.nav`
@@ -30,8 +42,8 @@ const Header = (props) => {
     <HeaderStyle>
         <Logo>Fruit Emporium</Logo>
         <div>
-            <StyledLink to="/">Home</StyledLink>
-            <StyledLink to="/about">About</StyledLink>
+            <StyledLink activeClassName='selected' exact to="/" >Home</StyledLink>
+            <StyledLink activeClassName='selected' exact to="/about">About</StyledLink>
         </div>
     </HeaderStyle>
     );
