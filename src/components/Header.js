@@ -42,4 +42,9 @@ const Logo = styled.h2`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+
+  &:hover {
+    color: red;
+    border-bottom: 2px solid red;
+  }
 `;
