@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeaderStyle = styled.header`
@@ -18,19 +18,28 @@ const Ul = styled.ul`
   & a {
     text-decoration: none;
   }
+
+  & .selected {
+    color: darksalmon;
+    border-bottom: 3px solid darksalmon;
+  }
+
+  & :not(.selected) {
+    color: gray;
+  }
 `;
 
-const Header = (props) => {
+const Header = () => {
   return (
     <HeaderStyle>
       <h1>Fruit Emporium</h1>
       <nav>
         <Ul>
           <li>
-            <Link to='/'>Home</Link>
+            <NavLink exact activeClassName='selected' to='/'>Home</NavLink>
           </li>
           <li>
-            <Link to='/about'>About</Link>
+            <NavLink exact activeClassName='selected' to='/about'>About</NavLink>
           </li>
         </Ul>
       </nav>
