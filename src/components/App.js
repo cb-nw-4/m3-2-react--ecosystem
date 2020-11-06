@@ -5,6 +5,7 @@ import Header from './Header';
 import About from './About';
 import Home from './Home';
 import styled from 'styled-components';
+import ItemDetails from './ItemDetails';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +29,10 @@ const App = (props) => {
      <GlobalStyle />
     < Wrapper>
      <Header/>
-    <Switch>
+    <Switch>    
+      <Route path="/items/:itemId">
+        <ItemDetails/>
+      </Route>
       <Route path="/about">
         <About/>
       </Route>
