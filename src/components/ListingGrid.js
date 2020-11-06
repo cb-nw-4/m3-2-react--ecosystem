@@ -6,9 +6,6 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-import { items } from '../data';
-
-import ItemDetails from './ItemDetails';
 
 const FruitContainer = styled.div` 
     display: inline-block;
@@ -70,5 +67,6 @@ ListingGrid.propTypes = {
       })
     ).isRequired,
 };
+
 
 export default ListingGrid;

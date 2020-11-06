@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import Header from './Header';
 
 import About from './About';
@@ -9,14 +11,6 @@ import Homepage from './Home';
 import ItemDetails from './ItemDetails';
 
 
-import { 
-  BrowserRouter,
-  Switch, 
-  Route 
-} from 'react-router-dom';
-
-
-
 const App = (props) => {
   return <BrowserRouter>
     <Header></Header>
@@ -24,7 +18,7 @@ const App = (props) => {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/items/:itemId" component={ItemDetails}>
+      <Route path="/items/:itemId">
         <ItemDetails />
       </Route>
       <Route path="/">

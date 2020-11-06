@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { items } from '../data';
 
 import ListingGrid from './ListingGrid';
@@ -10,19 +11,23 @@ const Container = styled.div`
     display: inline-block;
 `
 
+const HomeText = styled.p` 
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 20px;
+`
+
 const Home = (props) => {
     return (
         <Container>
-            <p>Fruit emporium sells the finest fruits from this world and beyond.
+            <HomeText>Fruit emporium sells the finest fruits from this world and beyond.
 
-            Browse items:</p>
+            Browse items:</HomeText>
 
             <ListingGrid itemList = {Object.values(items)}/>
         </Container>
     )
 }
-
-
 
 
 export default Home;

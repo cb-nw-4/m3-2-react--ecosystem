@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 import { items, sellers } from '../data';
 
+
 const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -56,7 +57,7 @@ const BuyButton = styled.button`
     background-color: cyan;
     margin: 10px;
     font-size: 18px;
-    font-weight;
+    font-weight: bold;
     padding: 10px;
     border-radius: 5px;
 `
@@ -77,6 +78,7 @@ const SellerImage = styled.img`
     border-radius: 50%;
     margin: 10px;
 `
+
 const SellerText = styled(Description)` 
     font-weight: bold;
     font-size: 16px;
@@ -105,24 +107,3 @@ const ItemDetails = () => {
 }
 
 export default ItemDetails;
-
-
-
-// const ListingGrid = ({ itemList }) => {
-//     return(
-//         <div>
-//             {itemList.map((item) => {
-//                 return (
-//                     <FruitContainer>
-//                         <FruitItem>
-//                             <FruitImage src={item.imageSrc} />
-//                             <FruitName>{item.name}</FruitName>
-//                             <LatinName>{item.latinName}</LatinName>
-//                         </FruitItem>
-//                     </FruitContainer>
-//                 )
-
-//             })}
-//         </div>
-//     );
-// }
