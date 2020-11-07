@@ -12,6 +12,8 @@ import Header from './Header';
 import About from './About';
 import Homepage from './Home';
 import ItemDetails from './ItemDetails';
+import Sellers from './Sellers';
+import SellerDetails from './SellerDetails';
 
 const App = (props) => {
   return (
@@ -19,6 +21,8 @@ const App = (props) => {
     <Header></Header>
     <Switch>
       <Route path='/items/:itemID'><ItemDetails /></Route>
+      <Route path='/sellers/:sellerID'><SellerDetails /></Route>
+      <Route path='/sellers'><Sellers /></Route>
       <Route path='/about'><About /></Route>
       <Route path='/'><Homepage /></Route>
     </Switch>
