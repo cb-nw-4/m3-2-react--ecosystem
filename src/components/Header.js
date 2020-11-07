@@ -47,6 +47,15 @@ const Header = () => {
         >
         About
         </StyledLink>
+        <StyledLink 
+            exact to='/sellers'
+            activeStyle={{
+                color: 'rgb(255, 51, 204)',
+                borderBottom: 'solid rgb(255, 51, 204) 5px'
+            }}
+        >
+        Sellers
+        </StyledLink>
         </div>
         </HeaderContainer>
     );
