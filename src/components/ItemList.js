@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ItemList = (item) => {
   return (
     <FruitDiv key={item.id}>
-      <FruitLink to={item.id}>
+      <FruitLink to={`/items/${item.id}`}>
         <FruitImage src={item.imageSrc}></FruitImage>
         <FruitName>{item.name}</FruitName>
         <FruitLatinName>{item.latinName}</FruitLatinName>

@@ -1,17 +1,24 @@
-// import React from "react";
-// import Sellers from "./Sellers";
-// import PropTypes from "prop-types";
-// import { sellers } from "../data";
+import React from "react";
+import Sellers from "./Sellers"; 
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { sellers } from "../data";
 
-// const SellersGrid = ({ sellersArray }) => {
-//   let output = sellersArray.map((seller) => {
-//     return (
-//       <div>
-//         <div key={seller.id}>{Sellers(seller)}</div>
-//       </div>
-//     );
-//   });
-//   return output;
-// };  
+const SellersGrid = ({ sellersArray }) => {
+  let output = sellersArray.map((seller) => {
+    return (
+      <Wrapper>
+        <div key={seller.id}>{Sellers(seller)}</div>
+      </Wrapper>
+    );
+  });
+  return output;
+};  
+ 
 
-// export default SellersGrid;
+const Wrapper = styled.div` 
+
+ height:400px;
+
+ `;
+export default SellersGrid;
