@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App';
 
+import { sellers, items} from './data.js';
+
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App items={items} sellers={sellers}/>, rootElement);
