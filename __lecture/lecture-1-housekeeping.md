@@ -1,3 +1,58 @@
+<!-- .paragraph {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+}
+.paragraph strong {
+  color: red;
+}
+.paragraph em {
+  color: #666;
+}
+
+const Paragraph = styled.p`
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+
+  & strong {
+    color :red;
+  }
+
+  & em {
+    color: #666;
+  }
+`;
+
+function FantasticStory(props) {
+  return (
+    <div>
+    <Paragraph>
+      <p>
+        The <strong>quick</strong> red fox jumped over
+        the <em>lazy</em> dog.
+      </p>
+      </Paragraph>
+      <p>
+        The end.
+      </p>
+    </div>
+  )
+} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # [3-2]
 
 # React Ecosystem
